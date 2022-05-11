@@ -6,8 +6,9 @@ import org.testng.annotations.Test;
 
 public class BasicAnnotations {
 
+
     @Test(groups = "smoke")
-    public void bfirstTest(){
+    public void cfirstTest(){
         System.out.println("This is my first testcase");
     }
 
@@ -17,11 +18,14 @@ public class BasicAnnotations {
     }
 
     @Test
-    public void thirdTest(){
+    public void bthirdTest(){
         System.out.println("This is my third testcase");
     }
 
-
+@BeforeMethod
+public void before(){
+    System.out.println("Second HW");
+}
     @BeforeMethod
     public void beforeMethod(){
         System.out.println("*******I am Precondition*********");
